@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/todo" class="btn btn-sm btn-primary">AddTask</a>
+    
+    <div>
+        <table>
+              <tr>
+                    <th>taskid </th>
+                    <th>task</th>
+                    <th>assignto</th>
+              </tr>
+          
+                 <%listitem.forEach(function(dolist){%>
+              <tr>
+                  <td><%=dolist.taskid%></td>
+                  <td><%=dolist.taskname%></td>
+                  <td><%=dolist.assignto%></td>
+
+                  <td>
+                      <a href="todo/edit/<%=dolist.taskid%>" class = "btn btn-sm btn-primary">Edit</a>
+                      <a href="todo/delete/<%=dolist.taskid%>" class = "btn btn-sm btn-primary">delete</a>
+                  </td>
+
+              </tr>
+              <%});%>
+
+
+
+
+
+
+        </table>
+
+  </div>
+
+</body>
+</html>
